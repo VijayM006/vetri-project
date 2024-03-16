@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style2.css')}}">
+
+    <title>Website</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+        }
+        section::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(247, 54, 134);
+            border-radius: 0 0 50% 50%/ 0 0 100% 100%; 
+            transform: scaleX(1.5);
+        }
+        section .content{
+            position: relative;
+            z-index: 1;
+            margin: 0 auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        section .content h2{
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 3em;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        .flex-container{
+            width: 100%;
+            display: inline-block;
+            height: auto;
+            flex-direction: column; /* Stack flex items vertically */
+            justify-content: center; /* Center flex items horizontally */
+            align-items: center;
+        }
+        .flex{
+
+            background-color:rgba(199, 192, 192, 0.2) ;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 20px;
+            margin: 10px auto;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a href="{{url_for('signup')}}"><li>Signup</li></a>
+            <a href="{{url_for('login')}}"><li>Login</li></a>
+            <a href="{{url_for('logout')}}"><li>Logout</li></a>
+          </ul>
+        </div>
+      </nav>
+    <div class="flex-container">
+        <div class="flex">
+             <a href="{{url_for('colbutton')}}">College</a>
+        </div>
+        <div class="flex">
+            <a href="{{url_for('schbutton')}}">Schools</a>
+
+        </div>
+        <div class="flex">
+             <a href="{{url_for('unibutton')}}">University</a>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

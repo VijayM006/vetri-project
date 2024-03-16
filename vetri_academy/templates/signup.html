@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Signup</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style1.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style2.css')}}">
+
+
+</head>
+<body>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a href="#"><li>Home</li></a>
+        <a href="{{url_for('signup')}}"><li>Signup</li></a>
+        <a href="{{url_for('login')}}"><li>Login</li></a>
+        <a href="{{url_for('logout')}}"><li>Logout</li></a>
+      </ul>
+    </div>
+  </nav>
+<!-- partial:index.partial.html -->
+<div id="bg"></div>
+
+<form method="post">
+  <div class="form-field">
+    <input type="text" name="Name" placeholder="Name" required/>
+  </div>
+  
+  <div class="form-field">
+    <input type="password" name="Password" placeholder="Password" required/>                         
+  </div>
+  
+  <div class="form-field">
+    <button class="btn" type="submit" href="">Signup</button>
+  </div>
+</form>
+<!-- partial -->
+  
+</body>
+</html>

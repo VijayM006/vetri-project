@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='formstyle.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style2.css')}}">
+  <style>
+    body{
+      background-image: url('bg.jpg');
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+
+
+</head>
+<body>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a href="#"><li>Home</li></a>
+        <a href="{{url_for('signup')}}"><li>Signup</li></a>
+        <a href="{{url_for('login')}}"><li>Login</li></a>
+        <a href="{{url_for('Logout')}}"><li>Logout</li></a>
+      </ul>
+    </div>
+  </nav>
+
+<!-- partial:index.partial.html -->
+<div class="container">
+
+<form action="{{url_for('websites')}}",method="post">
+  <p>Login form</p>
+  <div class="form-field">
+    <input type="text" placeholder="Name" required name="Name"/>
+  </div>
+  
+  <div class="form-field">
+    <input type="password" placeholder="Password" required name="Password"/>
+   </div>
+  
+  <div class="form-field">
+    <!-- <button onclick="table()">Login</button>
+    <script>function table(){ window.location.href='/table';}</script> -->
+    <button type="submit" href="{{url_for('websites')}}" value="submit">Log in</button>
+  </div>
+ </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

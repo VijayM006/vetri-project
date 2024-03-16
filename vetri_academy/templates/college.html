@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='formstyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style2.css')}}">
+    <style>
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    }
+    th {
+    background-color: #007bff; /* Blue color for header cells */
+    color:black; /* White text color for header cells */
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    background-color: #f0f0f0; /* Light gray color for data cells */
+    border: 1px solid black;
+    padding: 8px;
+    color: black;
+    text-align: left;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="{{url_for('signup')}}"><li>Signup</li></a>
+                <a href="{{url_for('login')}}"><li>Login</li></a>
+                <a href="{{url_for('logout')}}"><li>Logout</li></a>
+             </ul>
+            </div>
+          </nav>
+
+    </header>
+
+
+    <table cell-spading="10px" border="all" style="border-collapse: collapse; text-align:center">
+        <tr>
+            <th>No</th>
+            <th>College name</th>
+            <th>Category</th>
+            <th> college Website</th>            
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>JP College of engineering</td>
+            <td>engineering</td>
+            <td><a href="https://jpcoe.ac.in/">Website</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Sri ram nallamani Yadava college of Arts and Science</td>
+            <td>Arts and Science</td>
+            <td><a href="https://www.nallamanicolleges.org/">Website</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Sardar Raja College Of Engineering</td>
+            <td>Engineering</td>
+            <td><a href="https://src.org.in/">Website</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>JP College Of Arts and Science</td>
+            <td>Arts and Science</td>
+            <td><a href="https://jpcas.edu.in/">Website</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Arulmigu Senthilandavar Polytechnic College</td>
+            <td>Polytechnic</td>
+            <td><a href="https://www.asapolytechnic.co.in/">Website</a></td>
+        </tr>
+    </table>
+</body>
+</html>
